@@ -1,0 +1,89 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+@import "@fontsource/dm-sans/400.css";
+@import "@fontsource/dm-sans/500.css";
+@import "@fontsource/dm-sans/600.css";
+@import "@fontsource/dm-sans/700.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-main: "DM Sans", system-ui, sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--bg-base);
+  --color-foreground: var(--text-primary);
+  --color-card: var(--bg-card);
+  --color-card-foreground: var(--text-primary);
+  --color-popover: var(--bg-card);
+  --color-popover-foreground: var(--text-primary);
+  --color-primary: var(--text-primary);
+  --color-primary-foreground: var(--bg-base);
+  --color-secondary: var(--bg-subtle);
+  --color-secondary-foreground: var(--text-primary);
+  --color-muted: var(--bg-subtle);
+  --color-muted-foreground: var(--text-secondary);
+  --color-accent: var(--bg-subtle);
+  --color-accent-foreground: var(--text-primary);
+  --color-destructive: oklch(0.577 0.245 27.325);
+  --color-destructive-foreground: var(--text-primary);
+  --color-border: var(--border-base);
+  --color-input: var(--border-base);
+  --color-ring: var(--text-tertiary);
+}
+
+:root {
+  --radius: 0.5rem;
+  --bg-base: #090909;
+  --bg-card: #111111;
+  --bg-subtle: #1a1a1a;
+  --border-base: rgba(255, 255, 255, 0.07);
+  --border-hover: rgba(255, 255, 255, 0.18);
+  --text-primary: #f0eee8;
+  --text-secondary: #a09e98;
+  --text-tertiary: #5a5855;
+  --font-main: "DM Sans", system-ui, sans-serif;
+}
+
+.dark {
+  --bg-base: #090909;
+  --bg-card: #111111;
+  --bg-subtle: #1a1a1a;
+}
+
+@layer base {
+  * {
+    border-color: var(--border-base);
+  }
+  html,
+  body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  ::selection {
+    background: var(--text-primary);
+    color: var(--bg-base);
+  }
+}
+
+@utility marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none !important;
+    transform: none !important;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
