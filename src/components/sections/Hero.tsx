@@ -54,7 +54,7 @@ export default function Hero() {
               color: "var(--text-primary)",
             }}
           >
-            Frontend Developer{" "}
+            Full-Stack Developer{" "}
             <span style={{ color: "var(--text-tertiary)" }}>/</span> AI Explorer{" "}
             <span style={{ color: "var(--text-tertiary)" }}>·</span> Builder
           </motion.h1>
