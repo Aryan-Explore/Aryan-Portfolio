@@ -13,7 +13,11 @@ const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.08 } }
 const links = [
   { icon: Mail, label: "aryanvarma292@gmail.com", href: "mailto:aryanvarma292@gmail.com" },
   { icon: Github, label: "github.com/Aryan-Explore", href: "https://github.com/Aryan-Explore" },
-  { icon: Linkedin, label: "linkedin.com/in/aryan-varma", href: "https://linkedin.com/in/aryan-varma" },
+  {
+    icon: Linkedin,
+    label: "linkedin.com/in/aryan--varma/",
+    href: "https://www.linkedin.com/in/aryan--varma/",
+  },
   { icon: Phone, label: "+91 94394 18123", href: "tel:+919439418123" },
 ];
 
